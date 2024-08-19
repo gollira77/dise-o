@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header, .section {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            margin-top: 1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #555;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .text {
+            color: #555;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .grid-values {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .grid-team {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .grid-achievements {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-title {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .bg-muted {
+            background-color: #e0e0e0;
+        }
+
+        .bg-background {
+            background-color: #fff;
+        }
+
+        .text-foreground {
+            color: #333;
+        }
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-background text-foreground">
+        <header class="header">
+            <h1 class="title">Sobre Nosotros</h1>
+            <p class="subtitle">
+                Somos una empresa dedicada a brindar soluciones innovadoras y de alta calidad a nuestros clientes. Nuestro
+                enfoque en la excelencia y la atención al detalle nos ha permitido convertirnos en líderes en nuestra
+                industria.
+            </p>
+        </header>
+        <section class="section">
+            <div class="container">
+                <div class="grid">
+                    <div>
+                        <h2 class="section-title">Nuestra Misión</h2>
+                        <p class="text">
+                            Nuestra misión es brindar soluciones excepcionales a nuestros clientes, impulsando su éxito y
+                            crecimiento. Nos esforzamos por comprender sus necesidades y ofrecer servicios personalizados que
+                            superen sus expectativas.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Nuestra Visión</h2>
+                        <p class="text">
+                            Nuestra visión es convertirnos en la empresa líder en nuestra industria, reconocida por nuestra
+                            innovación, excelencia y compromiso con la satisfacción del cliente. Aspiramos a ser un socio confiable
+                            y de confianza para todas nuestras partes interesadas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bg-muted">
+            <div class="container">
+                <h2 class="section-title">Nuestros Valores</h2>
+                <div class="grid grid-values">
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        <h3 class="card-title">Integridad</h3>
+                        <p class="text">Actuamos con honestidad, transparencia y ética en todas nuestras acciones.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                        <h3 class="card-title">Innovación</h3>
+                        <p class="text">Fomentamos la creatividad y la búsqueda constante de nuevas soluciones.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+                        <h3 class="card-title">Excelencia</h3>
+                        <p class="text">Nos esforzamos por brindar servicios de la más alta calidad a nuestros clientes.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+                        <h3 class="card-title">Trabajo en Equipo</h3>
+                        <p class="text">Fomentamos la colaboración y el apoyo mutuo entre nuestros colaboradores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Nuestro Equipo</h2>
+                <div class="grid grid-team">
+                    <div class="card">
+                        <img src="data:image/jpeg;base64,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" alt="John Doe" class="avatar"/>
+                        <h3 class="card-title">John Doe</h3>
+                        <p class="text">CEO</p>
+                        <p class="text">John es un líder visionario con más de 15 años de experiencia en la industria.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7zA4wHCrVO2vWQI3U_pVy8aL-H7Vqp4J10A&s" alt="Jane Ahn" class="avatar"/>
+                        <h3 class="card-title">Jane Ahn</h3>
+                        <p class="text">Directora de Operaciones</p>
+                        <p class="text">Jane es una experta en gestión de proyectos con un enfoque en la eficiencia.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvEZ36DcVPGk32y0gJJhb_f2KBf4vv5CGVg&s" alt="Michael Smith" class="avatar"/>
+                        <h3 class="card-title">Michael Smith</h3>
+                        <p class="text">Director de Tecnología</p>
+                        <p class="text">Michael lidera nuestro equipo de desarrollo con un enfoque en la innovación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bg-muted">
+            <div class="container">
+                <h2 class="section-title">Nuestra Historia</h2>
+                <p class="text">
+                    Nuestra empresa fue fundada en 2010 con el objetivo de brindar soluciones tecnológicas innovadoras. A lo largo de los años, hemos crecido y evolucionado, siempre manteniendo nuestro compromiso con la calidad y la satisfacción del cliente.
+                </p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Nuestros Logros</h2>
+                <div class="grid grid-achievements">
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5V3m-7 5.5 7-5 7 5M5 15l7 5 7-5"/></svg>
+                        <h3 class="card-title">Innovación Tecnológica</h3>
+                        <p class="text">Hemos desarrollado soluciones tecnológicas innovadoras que han transformado nuestra industria.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a2 2 0 0 1 2-2h.6a2 2 0 0 1 1.4.6L12 17l5-6.4a2 2 0 0 1 1.4-.6h.6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="m8 5 4 4 4-4"/></svg>
+                        <h3 class="card-title">Reconocimientos</h3>
+                        <p class="text">Hemos sido reconocidos con múltiples premios por nuestra excelencia en la industria.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5V10"/><path d="M19 9V3h-6"/></svg>
+                        <h3 class="card-title">Crecimiento</h3>
+                        <p class="text">Hemos experimentado un crecimiento constante en los últimos años, expandiendo nuestra presencia a nivel nacional e internacional.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 20.5 8-10a1.5 1.5 0 0 0-1.2-2.5H5.2a1.5 1.5 0 0 0-1.2 2.5l8 10Z"/><path d="M12 15v2.5"/></svg>
+                        <h3 class="card-title">Clientes Satisfechos</h3>
+                        <p class="text">Contamos con una base de clientes leales y satisfechos que confían en nuestros servicios.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12c1-6 8-6 9-2.5"/><path d="M8 12c1-4 6-4 7-1"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M12 16v4"/><path d="M9 20h6"/><circle cx="12" cy="10" r="2"/></svg>
+                        <h3 class="card-title">Impacto Social</h3>
+                        <p class="text">Nos enorgullece contribuir al desarrollo de nuestra comunidad a través de iniciativas de responsabilidad social.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body{
+    font-family: arial;
+    font-size: 16px;
+    margin: 0;
+    background-color:red;
+    color: #000;
+}
+
+.map-container{
+    width: 1000px;
+    margin: 0 auto;
+    height: 70vh;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+iframe{
+    border-radius: 10px;
+}

@@ -1,0 +1,544 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Styles */
+.header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+}
+
+
+/* Search Container */
+.search-container {
+    position: relative;
+    flex: 1;
+    max-width: 1000px;
+    margin-right: 24px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+input[type="search"] {
+    width: 100%;
+    padding: 12px 56px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+input[type="search"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-content: center;
+    text-decoration: none;
+    gap: 24px;
+    margin-left: 16px;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: font-weight 0.3s ease;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Cart Button */
+.cart-button {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-icon {
+    height: 24px;
+    width: 24px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    background-color: #ff5a5f;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Secondary Navigation Styles */
+.secondary-nav {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+.secondary-nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.secondary-nav-link {
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 12px;
+}
+
+.secondary-nav-link:hover {
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    /* Ocupa todo el ancho disponible */
+    height: 300px;
+    /* Ajusta la altura para que no sea muy ancha */
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 8px;
+    /* Opcional: redondea las esquinas */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    /* Cada imagen ocupa todo el ancho del contenedor */
+    height: 100%;
+    /* Ajusta la imagen a la altura del contenedor */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+    display: block;
+    object-position: center;
+}
+
+/* Carousel Controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Carousel Indicators (Dots) */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    /* Asegura que estén por encima de otros elementos */
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Info Boxes */
+.info-boxes {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+    /* Reduce el margen superior e inferior */
+    max-width: 1000px;
+    /* Reduce el ancho máximo */
+    padding: 10px 0;
+    /* Reduce el padding superior e inferior */
+    gap: 15px;
+    /* Reduce el espacio entre los casilleros */
+}
+
+.info-box {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    /* Reduce el padding interno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* Reduce el espacio entre el icono y el texto */
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+.info-box:hover {
+    background-color: #e0e0e0;
+}
+
+.info-icon {
+    color: #007bff;
+    width: 20px;
+    /* Reduce el tamaño del icono */
+    height: 20px;
+    display: flex;
+    /* Asegura que el contenedor del ícono se comporte como un contenedor flexible */
+    align-items: center;
+    /* Centra verticalmente el contenido del contenedor del ícono */
+}
+
+.info-text p {
+    margin: 0;
+    font-size: 14px;
+    /* Reduce el tamaño de la fuente */
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    /* Asegura que el texto se alinee correctamente con el ícono */
+    align-items: center;
+    /* Centra verticalmente el texto dentro de su contenedor */
+}
+
+
+
+/* Seccion Slider Principal */
+.slider {
+    width: 100%;
+    max-width: 100vw;
+    height: 400px;
+    /* Altura reducida para parecer un banner */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slider .list img {
+    width: 1600px;
+    max-width: 100vw;
+    height: 100%;
+    /* Mantiene la altura del contenedor del slider */
+    object-fit: cover;
+}
+
+.slider .buttons {
+    position: absolute;
+    top: 50%;
+    /* Centra verticalmente los botones */
+    transform: translateY(-50%);
+    /* Ajusta para centrar verticalmente */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* Espaciado horizontal para alejar los botones de los bordes */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho total */
+}
+
+.slider .buttons button {
+    width: 70px;
+    /* Tamaño aumentado para los botones */
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 24px;
+    /* Tamaño de fuente aumentado para mayor visibilidad */
+}
+
+.slider .dots {
+    position: absolute;
+    bottom: 15px;
+    /* Ajusta la posición vertical de los puntos */
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li {
+    list-style: none;
+    width: 8px;
+    /* Tamaño reducido para los puntos */
+    height: 8px;
+    background-color: #fff;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.slider .dots li.active {
+    width: 20px;
+    /* Tamaño aumentado para el punto activo */
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 250px;
+        /* Altura aún más reducida en pantallas pequeñas */
+    }
+}
+
+
+
+/* CARRUSEL OFERTA */
+
+.product {
+    border-right: 1px solid #bebebe;
+    padding: 10px;
+    /* Aumento del relleno para mayor espacio */
+    background: #fff;
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* Transición suave para la animación de escala */
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* Borde redondeado para las imágenes */
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Borde redondeado para las imágenes */
+    transition: all 0.3s ease;
+}
+
+.product-image .pic-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.product-image:hover .pic-2 {
+    opacity: 1;
+}
+
+.title {
+    font-size: 18px;
+    /* Tamaño de fuente aumentado */
+    font-weight: bold;
+    /* Negrita para el título */
+    margin: 15px 0;
+    /* Mayor margen superior e inferior */
+    color: black;
+}
+
+.content .price {
+    color: #1f8602;
+    font-size: 16px;
+    /* Tamaño de fuente aumentado */
+    font-weight: bold;
+    /* Negrita para los precios */
+}
+
+.content .old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 17px;
+    /* Tamaño de fuente ligeramente aumentado */
+    margin-right: 10px;
+}
+
+.content .current-price {
+    font-size: 20px;
+    /* Tamaño de fuente aumentado para el precio actual */
+}
+h2{
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    font-size: 30px;
+}
+.cart {
+    background: #000000;
+    /* Fondo negro para el botón del carrito */
+    color: #fff;
+    /* Texto blanco para el botón del carrito */
+    padding: 3px 3px;
+    /* Aumento del padding para el botón */
+    text-transform: uppercase;
+    width: 120px;
+    display: inline-block;
+    border-radius: 5px;
+    /* Borde redondeado para el botón */
+    margin-top: 15px;
+    /* Mayor margen superior */
+    transition: background 0.3s ease, transform 0.3s ease;
+    /* Transiciones suaves */
+}
+
+.content .cart:hover {
+    background: #555555;
+    /* Fondo rojo al pasar el ratón */
+    transform: scale(1.1);
+    /* Escala ligera al pasar el ratón */
+}
+
+a {
+    color: black;
+}
+
+
+/* SLIDER MARCA */
+.slider-marca {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-marca .slide-track-marca {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider-marca .slide-marca {
+    width: 200px;
+}
+
+.slider-marca .slide-marca img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+

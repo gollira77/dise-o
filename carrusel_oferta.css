@@ -1,0 +1,248 @@
+.product {
+    background-color: #fff;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid #ddd; /* Añade un borde gris claro */
+    position: relative;
+    padding-bottom: 60px;
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor del casillero */
+    overflow: hidden; /* Asegura que el borde y la sombra no se extiendan más allá del casillero */
+}
+
+.product .product-image {
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #ddd; /* Línea debajo de la imagen */
+    padding-bottom: 10px; /* Espacio entre la imagen y el borde */
+    margin-bottom: 10px; /* Espacio entre el borde y el texto */
+}
+
+.product .product-image a.image {
+	display: block;
+}
+
+.product .product-image img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 200px; /* Tamaño máximo en ancho */
+    max-height: 200px; /* Tamaño máximo en altura */
+    min-width: 100%; /* Asegura que la imagen no sea más pequeña que el contenedor */
+    min-height: 300px; /* Asegura que la imagen cubra al menos la altura mínima */
+    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
+    object-position: center; /* Centra la imagen en el contenedor */
+}
+
+
+.product .product-image .pic-1 {
+	transition: .3s;
+}
+.product .product-image:hover .pic-1 {
+	opacity: 0;
+}
+.product .product-image .pic-2 {
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: .5s;
+}
+.product .product-image:hover .pic-2 {
+	opacity: 1;
+}
+.product .cart {
+    color: #000000;
+    background: rgb(108, 108, 108);
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    padding: 8px 14px;
+    opacity: 1;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 20px; /* Subimos el botón al aumentar este valor */
+    left: 50%;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product .cart i.fa-shopping-cart {
+    font-size: 16px; /* Tamaño del ícono */
+    margin-right: 8px; /* Espacio entre el ícono y el texto si lo dejas */
+}
+
+.product .cart:hover {
+    background: #000000; /* Color de fondo al pasar el ratón */
+    color: #fff;
+}
+
+.product:hover .cart {
+    bottom: 0px; /* No mover el botón, siempre visible */
+}
+.product .links {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	opacity: 0;
+	position: absolute;
+	top: 10px;
+	right: -50px;
+	transition: .5s;
+	margin-bottom: 5px;
+}
+.product:hover .links {
+	opacity: 1;
+	right: 10px;
+}
+.product .links li a {
+	color: #fff;
+	font-size: 12px;
+	line-height: 30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	display: block;
+	background: #000;
+	transition: .5s;
+	margin-bottom: 5px;
+	padding-top: 10px;
+}
+.product:hover .links li a:hover {
+	color: #fff;
+	background: #c66;
+}
+.product .content {
+	padding: 12px;
+}
+.product .category {
+	font-size: 17px;
+	margin: 0 0 5px;
+	display: block;
+}
+.product .category a {
+	color: #999;
+	transition: .5s;
+	font-size: 11px;
+}
+.product .category a:hover {
+	color: #555;
+}
+
+.product .title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 3px;
+    max-height: 40px; /* Limita la altura a dos líneas */
+    line-height: 20px; /* Ajusta la altura de cada línea */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a dos líneas */
+    -webkit-box-orient: vertical;
+    height: 40px; /* Establece una altura fija */
+    margin-bottom: 16px;
+}
+
+.product .title a {
+    color: #2e2e2e;
+    transition: .5s;
+    display: inline-block;
+    font-size: 1.0rem;
+    font-weight: 500;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Permite que el texto se divida en varias líneas */
+}
+
+.product .title a:hover {
+	color: rgb(21, 21, 21);
+}
+
+.product .price {
+    text-align: left;
+    margin-bottom: 10px; /* Espacio debajo del contenedor de precios */
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+}
+
+.product .price .old-price {
+    color: #4a4949;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: line-through; /* Tacha el precio antiguo */
+    margin-bottom: 5px; /* Espacio entre el precio anterior y el actual */
+}
+
+.product .price .current-price {
+    color: rgb(17, 17, 17);
+    font-size: 20px; /* Tamaño de fuente más grande */
+    font-weight: 700; /* Negrita */
+    margin-bottom: 5px; /* Espacio entre el precio actual y el descuento */
+}
+
+.product .price .discount {
+    color: rgb(10, 204, 0);
+    font-size: 14px; /* Tamaño del texto del descuento */
+    font-weight: 600;
+    margin-top: 0; /* Asegura que no haya espacio adicional en la parte superior */
+}
+
+
+
+/* .product .price span {
+	color: #414040;
+	margin: 0 5px 0 0;
+	font-weight: 300;
+	font-size: 12px;
+    text-decoration-line: line-through;
+} */
+@media screen and (max-width: 990px) {
+.product {
+	margin: 0 0 30px;
+}
+}
+
+/* Ajustes para las flechas de navegación del carrusel */
+.owl-controls .owl-buttons {
+    position: absolute;
+    width: 100%;
+    top: 50%; /* Centra verticalmente el contenedor de flechas */
+    transform: translateY(-50%); /* Ajusta el contenedor verticalmente */
+}
+
+.owl-controls .owl-prev,
+.owl-controls .owl-next {
+    position: absolute;
+    width: 60px; /* Ancho de las flechas */
+    height: 60px; /* Altura de las flechas */
+    padding: 16px; /* Tamaño de las flechas */
+    background: #fff; /* Color de fondo blanco */
+    border-radius: 50%; /* Flechas redondeadas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* Sombra más prominente */
+    transition: background 0.5s, transform 0.5s, box-shadow 0.5s;
+
+}
+
+.owl-controls .owl-prev {
+    left: -70px; /* Mueve la flecha izquierda hacia la izquierda del carrusel */
+}
+
+.owl-controls .owl-next {
+    right: -70px; /* Mueve la flecha derecha hacia la derecha del carrusel */
+}
+
+.owl-controls .owl-prev:hover,
+.owl-controls .owl-next:hover {
+    background: #9c9ca0; /* Color de fondo al pasar el ratón */
+    transform: scale(1.1); /* Aumenta el tamaño de la flecha al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5); /* Sombra más intensa al pasar el ratón */
+}
